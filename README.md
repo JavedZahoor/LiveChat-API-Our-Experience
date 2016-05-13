@@ -1,6 +1,7 @@
 # Integrating LiveChat API - The good, the bad and the ugly
+Faisal Mumtaz, Software Engineer, Virtual Force Pvt. Ltd.
 
-We recently worked on an application that had chat as a major component. The application had chat as a major component. We chose to work with Meteor JS for the application but decided that for release 1 we will integrate Livechat on one end. The application required an operator module that was somewhat available through Livechat so we decided to use it for release 1 and then implement our own Operator module in Release 2. Here are some of my ramblings about the good, bad and ugly things that happened to us because of that decision:
+We recently worked on an application that had chat as a major component. We chose to work with Meteor JS for the application but decided that for release 1 we will integrate Livechat on one end. The application required an operator module that was somewhat available through Livechat so we decided to use it for release 1 and then implement our own Operator module in Release 2. Here are some of my ramblings about the good, bad and ugly things that happened to us because of that decision:
 
 ## The Good
 We evaluated a number of ticketing system and operator chat solutions but found that Livechat was the best in terms of availability of a “chat API”. We compared [zendesk](http://www.zendesk.com), [freshdesk](http://www.freshdesk.com) etc. and found good API documentation as well but couldn’t find APIs for chat. For that reason we chose Livechat API.
@@ -25,6 +26,8 @@ In order to receive new messages from a chat, we have to poll the an API for cha
 ### Problem 5
 Messages don’t have unique ids on livechat and are prone to duplication if the message list is not handled carefully on the client side considering the poll based nature of chat API.
 
+## The Ugly (items that became ugly for us)
+* The online and offline mode
 
 ### References
 
